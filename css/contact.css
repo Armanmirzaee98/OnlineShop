@@ -1,0 +1,1084 @@
+:root {
+  --primary-color: #6a11cb;
+  --secondary-color: #2575fc;
+  --accent-color: #ff4e62;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --gray-color: #6c757d;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* استایل هدر */
+header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  margin-left: 10px;
+  color: var(--accent-color);
+}
+
+.search-bar {
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px 0px 0px 30px;
+  font-size: 16px;
+  outline: none;
+  text-align: right;
+}
+
+.search-bar button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0 25px;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.search-bar button:hover {
+  background-color: #ff2e4a;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-actions a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.user-actions a:hover {
+  color: #ffdd40;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* دکمه منوی موبایل */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+/* استایل نوبار برای دسکتاپ */
+nav {
+  padding-top: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links > li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  min-width: 220px;
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+  z-index: 100;
+}
+
+.dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  color: var(--dark-color);
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+  color: var(--primary-color);
+}
+
+.dropdown-menu .dropdown {
+  position: relative;
+}
+
+.dropdown-menu .dropdown > .dropdown-menu {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+}
+
+.dropdown-menu .dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.hot-badge {
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-right: 5px;
+}
+
+/* Overlay برای موبایل */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* ریسپانسیو برای نوبار */
+@media (max-width: 992px) {
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: linear-gradient(
+      135deg,
+      var(--primary-color),
+      var(--secondary-color)
+    );
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+  }
+
+  .navbar.active {
+    display: block;
+    max-height: 1000px;
+    padding: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links > li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+
+  .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(-5px);
+  }
+
+  .dropdown-menu {
+    position: static;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+    margin-top: 0;
+    border-radius: 0;
+    border-right: 3px solid var(--accent-color);
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block;
+    max-height: 500px;
+  }
+
+  .dropdown-menu a {
+    padding: 12px 15px 12px 30px;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+
+  .dropdown-menu .dropdown > .dropdown-menu {
+    position: static;
+    margin-right: 15px;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+  }
+
+  .dropdown-menu .dropdown.active > .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu .dropdown-menu a {
+    padding-right: 45px;
+    font-size: 13px;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  /* آیکون‌های فلش در موبایل */
+  .nav-links > li > a i.fa-chevron-down,
+  .nav-links > li > a i.fa-chevron-left {
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links > li.active > a i.fa-chevron-down {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu .dropdown > a i.fa-chevron-left {
+    transform: rotate(-90deg);
+  }
+
+  .dropdown-menu .dropdown.active > a i.fa-chevron-left {
+    transform: rotate(-180deg);
+  }
+
+  /* استایل اسکرول بار */
+  .navbar::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .navbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+
+  .navbar::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo {
+    order: 1;
+    font-size: 22px;
+  }
+
+  .search-bar {
+    order: 3;
+    max-width: 100%;
+    margin: 10px 0 0;
+    flex: 0 0 100%;
+  }
+
+  input {
+    padding-right: 45px !important;
+  }
+
+  .user-actions {
+    order: 2;
+    margin-right: auto;
+  }
+
+  .mobile-menu-btn {
+    order: 4;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .user-actions {
+    gap: 15px;
+  }
+
+  .search-bar input {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .search-bar button {
+    padding: 0 20px;
+  }
+}
+
+/* هیرو بخش پشتیبانی */
+.support-hero {
+  background: linear-gradient(
+      135deg,
+      rgba(37, 117, 252, 0.9),
+      rgba(23, 162, 184, 0.9)
+    ),
+    url("https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 120px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.support-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+      circle at 30% 70%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(23, 162, 184, 0.2) 0%,
+      transparent 50%
+    );
+}
+
+.support-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.support-hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.support-hero h1 span {
+  color: #ffdd40;
+  position: relative;
+}
+
+.support-hero h1 span::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 221, 64, 0.3);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.support-hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.8;
+}
+
+.support-stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  color: #ffdd40;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* بخش راه‌های ارتباطی */
+.contact-methods {
+  padding: 80px 0 50px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 36px;
+  color: var(--dark-color);
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--info-color),
+    var(--secondary-color)
+  );
+  border-radius: 2px;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.contact-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--info-color);
+}
+
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  background: linear-gradient(
+    135deg,
+    var(--info-color),
+    var(--secondary-color)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: white;
+}
+
+.contact-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: var(--dark-color);
+}
+
+.contact-card p {
+  color: var(--gray-color);
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.contact-info {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--info-color);
+  margin-bottom: 15px;
+}
+
+.contact-time {
+  font-size: 14px;
+  color: var(--gray-color);
+}
+
+/* بخش فرم تماس */
+.contact-form-section {
+  background: linear-gradient(
+    135deg,
+    rgba(37, 117, 252, 0.03),
+    rgba(23, 162, 184, 0.03)
+  );
+  padding: 80px 0;
+  border-radius: 30px;
+  margin-bottom: 60px;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: var(--shadow-lg);
+}
+
+.form-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: var(--dark-color);
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: var(--transition);
+  background-color: #f8f9fa;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--info-color);
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.1);
+}
+
+.form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 40px;
+  background: linear-gradient(
+    135deg,
+    var(--info-color),
+    var(--secondary-color)
+  );
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  gap: 10px;
+  box-shadow: 0 5px 15px rgba(23, 162, 184, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(23, 162, 184, 0.4);
+}
+
+.btn i {
+  font-size: 20px;
+}
+
+/* بخش سوالات متداول */
+.faq-section {
+  padding: 60px 0;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid #eee;
+}
+
+.faq-question {
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.faq-question:hover {
+  background-color: #f8f9fa;
+}
+
+.faq-question h3 {
+  font-size: 18px;
+  color: var(--dark-color);
+  margin: 0;
+  font-weight: 600;
+}
+
+.faq-icon {
+  font-size: 20px;
+  color: var(--info-color);
+  transition: var(--transition);
+}
+
+.faq-answer {
+  padding: 0 30px;
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  background-color: #f8f9fa;
+}
+
+.faq-item.active .faq-answer {
+  padding: 25px 30px;
+  max-height: 500px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer p {
+  color: var(--gray-color);
+  line-height: 1.8;
+}
+
+/* بخش سیستم پشتیبانی آنلاین */
+.live-support {
+  background: linear-gradient(
+    135deg,
+    var(--info-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: 80px 0;
+  border-radius: 30px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.live-support-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.live-support h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.live-support p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.support-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px 25px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  background-color: #28a745;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.support-agents {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.agent-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  width: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.agent-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  border: 3px solid white;
+}
+
+.agent-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.agent-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.agent-role {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* بخش نقشه */
+.map-section {
+  margin-bottom: 60px;
+}
+
+.map-container {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  height: 400px;
+}
+
+/* استایل فوتر */
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 60px 0 30px;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-column h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-right: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: white;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  background-color: var(--info-color);
+  transform: translateY(-5px);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #444;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* ریسپانسیو اضافی */
+@media (max-width: 992px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .support-agents {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .agent-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .support-hero {
+    padding: 80px 0 60px;
+  }
+
+  .support-hero h1 {
+    font-size: 32px;
+  }
+
+  .support-hero p {
+    font-size: 18px;
+  }
+
+  .support-stats {
+    gap: 30px;
+  }
+
+  .stat-value {
+    font-size: 36px;
+  }
+
+  .form-container {
+    padding: 30px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .support-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .live-support h2 {
+    font-size: 28px;
+  }
+}

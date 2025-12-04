@@ -1,0 +1,1079 @@
+:root {
+  --primary-color: #6a11cb;
+  --secondary-color: #2575fc;
+  --accent-color: #ff4e62;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --gray-color: #6c757d;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* استایل هدر */
+header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  margin-left: 10px;
+  color: var(--accent-color);
+}
+
+.search-bar {
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px 0px 0px 30px;
+  font-size: 16px;
+  outline: none;
+  text-align: right;
+}
+
+.search-bar button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0 25px;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.search-bar button:hover {
+  background-color: #ff2e4a;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-actions a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.user-actions a:hover {
+  color: #ffdd40;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* دکمه منوی موبایل */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+/* استایل نوبار */
+nav {
+  padding-top: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links > li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  min-width: 220px;
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+  z-index: 100;
+}
+
+.dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  color: var(--dark-color);
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+  color: var(--primary-color);
+}
+
+.dropdown-menu .dropdown {
+  position: relative;
+}
+
+.dropdown-menu .dropdown > .dropdown-menu {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+}
+
+.dropdown-menu .dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.hot-badge {
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-right: 5px;
+}
+
+/* Overlay برای موبایل */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* هیرو بخش تخفیف‌ها */
+.discounts-hero {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 78, 98, 0.9),
+      rgba(255, 107, 53, 0.9)
+    ),
+    url("https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 120px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.discounts-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+      circle at 30% 70%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(255, 107, 53, 0.2) 0%,
+      transparent 50%
+    );
+}
+
+.discounts-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.discounts-hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.discounts-hero h1 span {
+  color: #ffdd40;
+  position: relative;
+}
+
+.discounts-hero h1 span::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 221, 64, 0.3);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.discounts-hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.8;
+}
+
+.countdown-timer {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px 40px;
+  display: inline-flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.countdown-item {
+  text-align: center;
+}
+
+.countdown-value {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  color: #ffdd40;
+}
+
+.countdown-label {
+  font-size: 16px;
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+/* استایل تب‌های دسته‌بندی تخفیف‌ها */
+.discount-tabs {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: -40px;
+  position: relative;
+  z-index: 2;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 50px;
+}
+
+.tabs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section-title {
+  font-size: 32px;
+  color: var(--dark-color);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, var(--accent-color), #ff6b35);
+  border-radius: 2px;
+}
+
+.tabs-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.tab-btn {
+  padding: 12px 25px;
+  background: transparent;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--gray-color);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.tab-btn:hover {
+  background-color: rgba(255, 78, 98, 0.1);
+  color: var(--accent-color);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, var(--accent-color), #ff6b35);
+  color: white;
+  box-shadow: 0 5px 15px rgba(255, 78, 98, 0.3);
+}
+
+/* کارت تخفیف ویژه */
+.featured-discount {
+  background: linear-gradient(135deg, #ff6b35, var(--accent-color));
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.featured-discount-content {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  color: white;
+}
+
+.featured-discount-text {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.featured-discount-badge {
+  background: white;
+  color: var(--accent-color);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featured-discount h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.featured-discount p {
+  opacity: 0.9;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 35px;
+  background-color: white;
+  color: var(--accent-color);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  gap: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.featured-discount-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-discount-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* استایل کارت محصول با تخفیف */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.product-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.1);
+}
+
+.product-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, var(--accent-color), #ff2e4a);
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(255, 78, 98, 0.3);
+  z-index: 2;
+}
+
+.discount-percent {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(135deg, #ff6b35, #ff8e53);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+  z-index: 2;
+}
+
+.product-info {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--dark-color);
+  height: 45px;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.current-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.old-price {
+  font-size: 16px;
+  color: var(--gray-color);
+  text-decoration: line-through;
+}
+
+.rating {
+  color: #ffc107;
+  margin-bottom: 15px;
+}
+
+.add-to-cart {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.add-to-cart:hover {
+  background-color: #5a0cb9;
+}
+
+/* بخش تخفیف‌های لحظه‌ای */
+.flash-sales {
+  background: linear-gradient(
+    135deg,
+    rgba(106, 17, 203, 0.05),
+    rgba(37, 117, 252, 0.05)
+  );
+  padding: 60px 0;
+  margin: 50px 0;
+  border-radius: 20px;
+}
+
+.flash-sales-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flash-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.flash-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent-color), #ff2e4a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  box-shadow: 0 5px 15px rgba(255, 78, 98, 0.3);
+}
+
+/* تبلیغات تخفیف */
+.discount-promo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.promo-card {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-radius: 20px;
+  padding: 40px 30px;
+  color: white;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-card:nth-child(2) {
+  background: linear-gradient(135deg, #ff6b35, #ff8e53);
+}
+
+.promo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.promo-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.promo-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.promo-card p {
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+/* استایل فوتر */
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 60px 0 30px;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-column h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-right: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: white;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #444;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* ریسپانسیو برای نوبار */
+@media (max-width: 992px) {
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: linear-gradient(
+      135deg,
+      var(--primary-color),
+      var(--secondary-color)
+    );
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+  }
+
+  .navbar.active {
+    display: block;
+    max-height: 1000px;
+    padding: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links > li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+
+  .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(-5px);
+  }
+
+  .dropdown-menu {
+    position: static;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+    margin-top: 0;
+    border-radius: 0;
+    border-right: 3px solid var(--accent-color);
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block;
+    max-height: 500px;
+  }
+
+  .dropdown-menu a {
+    padding: 12px 15px 12px 30px;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+
+  .dropdown-menu .dropdown > .dropdown-menu {
+    position: static;
+    margin-right: 15px;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+  }
+
+  .dropdown-menu .dropdown.active > .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu .dropdown-menu a {
+    padding-right: 45px;
+    font-size: 13px;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  /* آیکون‌های فلش در موبایل */
+  .nav-links > li > a i.fa-chevron-down,
+  .nav-links > li > a i.fa-chevron-left {
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links > li.active > a i.fa-chevron-down {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu .dropdown > a i.fa-chevron-left {
+    transform: rotate(-90deg);
+  }
+
+  .dropdown-menu .dropdown.active > a i.fa-chevron-left {
+    transform: rotate(-180deg);
+  }
+
+  /* استایل اسکرول بار */
+  .navbar::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .navbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+
+  .navbar::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .featured-discount-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .featured-discount-text {
+    padding-left: 0;
+    margin-bottom: 40px;
+  }
+
+  .countdown-timer {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .countdown-value {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo {
+    order: 1;
+    font-size: 22px;
+  }
+
+  .search-bar {
+    order: 3;
+    max-width: 100%;
+    margin: 10px 0 0;
+    flex: 0 0 100%;
+  }
+
+  .user-actions {
+    order: 2;
+    margin-right: auto;
+  }
+
+  .mobile-menu-btn {
+    order: 4;
+    margin-right: auto;
+  }
+
+  .discounts-hero {
+    padding: 80px 0 60px;
+  }
+
+  .discounts-hero h1 {
+    font-size: 32px;
+  }
+
+  .discounts-hero p {
+    font-size: 18px;
+  }
+
+  .tabs-navigation {
+    justify-content: center;
+  }
+
+  .flash-sales-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .countdown-timer {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .featured-discount h2 {
+    font-size: 28px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .user-actions {
+    gap: 15px;
+  }
+}

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه آنلاین مدرن | تخفیف‌های ویژه</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/offers.css">
+</head>
+
+<body>
+    <!-- هدر -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    فروشگاه آنلاین
+                </div>
+
+                <div class="search-bar">
+                    <button><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="جستجوی محصولات...">
+                </div>
+
+                <div class="user-actions">
+                    <a href="accounting.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="accounting.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <a href="accounting.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">۳</span>
+                    </a>
+                </div>
+
+                <!-- دکمه منوی موبایل -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- نوبار تو در تو -->
+            <nav>
+                <div class="navbar" id="navbar">
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> صفحه اصلی</a></li>
+
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-box"></i> محصولات <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="productviacat.html"><i class="fas fa-laptop"></i> لپ تاپ و کامپیوتر</a>
+                                </li>
+                                <li><a href="productviacat.html"><i class="fas fa-mobile-alt"></i> موبایل و تبلت</a>
+                                </li>
+                                <li><a href="productviacat.html"><i class="fas fa-tv"></i> لوازم خانگی</a></li>
+                                <li class="dropdown">
+                                    <a href="#"><i class="fas fa-tshirt"></i> پوشاک <i
+                                            class="fas fa-chevron-left"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="productviacat.html">مردانه</a></li>
+                                        <li><a href="productviacat.html">زنانه</a></li>
+                                        <li><a href="productviacat.html">بچگانه</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><i class="fas fa-book"></i> کتاب و لوازم تحریر</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="offers.html"><i class="fas fa-percent"></i> تخفیف‌ها</a></li>
+
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-list"></i> دسته‌بندی <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="productviacat.html"><i class="fas fa-laptop"></i> الکترونیک</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-home"></i> خانه و آشپزخانه</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-tshirt"></i> مد و پوشاک</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-shopping-cart"></i> کالای
+                                        سوپرمارکتی</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-running"></i> ورزش و سفر</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="contact.html"><i class="fas fa-headset"></i> پشتیبانی</a></li>
+
+                        <li>
+                            <a href="authentication.html" class="auth-simple-link">
+                                <i class="fas fa-user-circle"></i>
+                                <span>ورود / ثبت نام</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- overlay برای بستن منو -->
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <!-- هیرو بخش تخفیف‌ها -->
+    <section class="discounts-hero">
+        <div class="container">
+            <div class="discounts-hero-content">
+                <h1>تخفیف‌های <span>شگفت‌انگیز</span> ویژه شما</h1>
+                <p>بهترین فرصت برای خرید با تخفیف‌های استثنایی تا ۸۰٪! زمان محدود است، فرصت را از دست ندهید.</p>
+
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="days">۰۵</div>
+                        <div class="countdown-label">روز</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="hours">۱۲</div>
+                        <div class="countdown-label">ساعت</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="minutes">۳۰</div>
+                        <div class="countdown-label">دقیقه</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="seconds">۴۵</div>
+                        <div class="countdown-label">ثانیه</div>
+                    </div>
+                </div>
+
+                <button class="btn">
+                    <i class="fas fa-bolt"></i> مشاهده همه تخفیف‌ها
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- تب‌های دسته‌بندی تخفیف‌ها -->
+    <div class="container">
+        <div class="discount-tabs">
+            <div class="tabs-header">
+                <h2 class="section-title">تخفیف‌های ویژه</h2>
+
+                <div class="tabs-navigation">
+                    <button class="tab-btn active" data-category="all">همه</button>
+                    <button class="tab-btn" data-category="electronics">الکترونیک</button>
+                    <button class="tab-btn" data-category="fashion">مد و پوشاک</button>
+                    <button class="tab-btn" data-category="home">خانه و آشپزخانه</button>
+                    <button class="tab-btn" data-category="sports">ورزشی</button>
+                </div>
+            </div>
+
+            <!-- تخفیف ویژه برتر -->
+            <div class="featured-discount">
+                <div class="featured-discount-content">
+                    <div class="featured-discount-text">
+                        <span class="featured-discount-badge">تخفیف پایان فصل</span>
+                        <h2>تا ۷۰٪ تخفیف روی تمام محصولات الکترونیکی</h2>
+                        <p>فقط تا پایان این هفته فرصت دارید از بهترین تخفیف سال بهره‌مند شوید. لپ‌تاپ، موبایل، هدفون و
+                            سایر لوازم الکترونیکی با قیمت باورنکردنی!</p>
+                        <button class="btn">
+                            <i class="fas fa-shopping-cart"></i> خرید سریع
+                        </button>
+                    </div>
+                    <div class="featured-discount-image">
+                        <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="محصولات الکترونیکی">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- بخش محصولات تخفیف دار -->
+    <section class="discount-products">
+        <div class="container">
+            <div class="products-grid" id="discountProducts">
+                <!-- محصول 1 -->
+                <div class="product-card" data-category="electronics">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="لپ‌تاپ گیمینگ">
+                        <span class="product-badge">تخفیف ویژه</span>
+                        <div class="discount-percent">۴۰٪</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">لپ‌تاپ گیمینگ ایسوس ROG Strix G15</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(۴.۵)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">۶۴,۹۰۰,۰۰۰ تومان</span>
+                            <span class="old-price">۷۲,۰۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                        </button>
+                    </div>
+                </div>
+
+                <!-- محصول 2 -->
+                <div class="product-card" data-category="electronics">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="ماوس گیمینگ">
+                        <span class="product-badge">پرفروش</span>
+                        <div class="discount-percent">۳۵٪</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">ماوس گیمینگ حرفه‌ای با ۱۲ دکمه</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(۵.۰)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">۱,۲۸۰,۰۰۰ تومان</span>
+                            <span class="old-price">۱,۷۵۰,۰۰۰ تومان</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                        </button>
+                    </div>
+                </div>
+
+                <!-- محصول 3 -->
+                <div class="product-card" data-category="fashion">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="کفش نایک">
+                        <span class="product-badge">پرطرفدار</span>
+                        <div class="discount-percent">۵۰٪</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">کفش ورزشی نایک ایر مکس ۲۰۲۳</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(۴.۰)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">۴,۵۰۰,۰۰۰ تومان</span>
+                            <span class="old-price">۶,۲۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                        </button>
+                    </div>
+                </div>
+
+                <!-- محصول 4 -->
+                <div class="product-card" data-category="home">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="مخلوط کن">
+                        <span class="product-badge">جدید</span>
+                        <div class="discount-percent">۳۰٪</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">مخلوط کن حرفه‌ای با ۶ تیغه استیل</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(۴.۷)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">۱,۸۵۰,۰۰۰ تومان</span>
+                            <span class="old-price">۲,۴۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش تخفیف‌های لحظه‌ای -->
+    <section class="flash-sales">
+        <div class="container">
+            <div class="flash-sales-header">
+                <div class="flash-title">
+                    <div class="flash-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h2 class="section-title">فروش لحظه‌ای</h2>
+                        <p>تخفیف‌های ویژه با زمان محدود</p>
+                    </div>
+                </div>
+
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="flash-hours">۰۳</div>
+                        <div class="countdown-label">ساعت</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="flash-minutes">۱۵</div>
+                        <div class="countdown-label">دقیقه</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="flash-seconds">۳۰</div>
+                        <div class="countdown-label">ثانیه</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <!-- محصول لحظه‌ای 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="ساعت هوشمند">
+                        <span class="product-badge">فروش لحظه‌ای</span>
+                        <div class="discount-percent">۶۰٪</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">ساعت هوشمند اندروید با گارانتی ۲۴ ماهه</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(۵.۰)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">۴,۳۲۰,۰۰۰ تومان</span>
+                            <span class="old-price">۵,۵۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-cart-plus"></i> خرید سریع
+                        </button>
+                    </div>
+                </div>
+
+                <!-- محصول لحظه‌ای 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="هدفون">
+                        <span class="product-badge">فروش لحظه‌ای</span>
+                        <div class="discount-percent">۵۵٪</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">هدفون بی‌سیم نویز کانسلیگ حرفه‌ای</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(۴.۵)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">۲,۴۹۰,۰۰۰ تومان</span>
+                            <span class="old-price">۳,۲۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-cart-plus"></i> خرید سریع
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تبلیغات تخفیف -->
+    <div class="container">
+        <div class="discount-promo">
+            <div class="promo-card">
+                <div class="promo-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3>ارسال رایگان</h3>
+                <p>برای تمام سفارشات بالای ۵۰۰ هزار تومان، ارسال کاملاً رایگان است.</p>
+                <button class="btn" style="background-color: white; color: var(--primary-color);">
+                    <i class="fas fa-shopping-cart"></i> خرید کنید
+                </button>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3>هدیه ویژه</h3>
+                <p>با هر خرید بالای ۲ میلیون تومان، یک هدیه شگفت‌انگیز دریافت کنید.</p>
+                <button class="btn" style="background-color: white; color: #ff6b35;">
+                    <i class="fas fa-gift"></i> دریافت هدیه
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- فوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>درباره فروشگاه</h3>
+                    <p>فروشگاه آنلاین ما با بیش از ۱۰ سال سابقه در زمینه فروش محصولات با کیفیت، همواره سعی در ارائه
+                        بهترین خدمات به مشتریان خود داشته است.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>لینک‌های سریع</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">صفحه اصلی</a></li>
+                        <li><a href="category.html">محصولات پرفروش</a></li>
+                        <li><a href="discounts.html">تخفیف‌های ویژه</a></li>
+                        <li><a href="#">مقالات آموزشی</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>خدمات مشتریان</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">پیگیری سفارش</a></li>
+                        <li><a href="#">راهنمای خرید</a></li>
+                        <li><a href="#">سوالات متداول</a></li>
+                        <li><a href="#">شرایط بازگرداندن کالا</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>تماس با ما</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> تهران، خیابان آزادی، دانشگاه صنعتی شریف</li>
+                        <li><i class="fas fa-phone"></i> ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                        <li><i class="fas fa-envelope"></i> info@onlinestore.ir</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>کلیه حقوق این وبسایت متعلق به فروشگاه آنلاین می‌باشد. © ۲۰۲۳</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/offers.js"></script>
+</body>
+
+</html>

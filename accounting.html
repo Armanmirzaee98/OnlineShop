@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه آنلاین مدرن | حساب کاربری</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="css/accounting.css">
+</head>
+
+<body>
+    <!-- هدر -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    فروشگاه آنلاین
+                </div>
+
+                <div class="search-bar">
+                    <button><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="جستجوی محصولات...">
+                </div>
+
+                <div class="user-actions">
+                    <a href="accounting.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="accounting.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <a href="accounting.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">۳</span>
+                    </a>
+                </div>
+
+                <!-- دکمه منوی موبایل -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- نوبار تو در تو -->
+            <nav>
+                <div class="navbar" id="navbar">
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> صفحه اصلی</a></li>
+
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-box"></i> محصولات <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="productviacat.html"><i class="fas fa-laptop"></i> لپ تاپ و کامپیوتر</a>
+                                </li>
+                                <li><a href="productviacat.html"><i class="fas fa-mobile-alt"></i> موبایل و تبلت</a>
+                                </li>
+                                <li><a href="productviacat.html"><i class="fas fa-tv"></i> لوازم خانگی</a></li>
+                                <li class="dropdown">
+                                    <a href="#"><i class="fas fa-tshirt"></i> پوشاک <i
+                                            class="fas fa-chevron-left"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="productviacat.html">مردانه</a></li>
+                                        <li><a href="productviacat.html">زنانه</a></li>
+                                        <li><a href="productviacat.html">بچگانه</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><i class="fas fa-book"></i> کتاب و لوازم تحریر</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="offers.html"><i class="fas fa-percent"></i> تخفیف‌ها</a></li>
+
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-list"></i> دسته‌بندی <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="productviacat.html"><i class="fas fa-laptop"></i> الکترونیک</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-home"></i> خانه و آشپزخانه</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-tshirt"></i> مد و پوشاک</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-shopping-cart"></i> کالای
+                                        سوپرمارکتی</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-running"></i> ورزش و سفر</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="contact.html"><i class="fas fa-headset"></i> پشتیبانی</a></li>
+
+                        <li>
+                            <a href="authentication.html" class="auth-simple-link">
+                                <i class="fas fa-user-circle"></i>
+                                <span>ورود / ثبت نام</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- overlay برای بستن منو -->
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <!-- بخش حساب کاربری -->
+    <section class="account-section">
+        <div class="container">
+            <div class="account-header">
+                <h1 class="account-title">حساب کاربری من</h1>
+                <div class="account-actions">
+                    <button class="btn btn-outline">
+                        <i class="fas fa-sign-out-alt"></i> خروج
+                    </button>
+                </div>
+            </div>
+
+            <div class="account-container">
+                <!-- سایدبار حساب کاربری -->
+                <div class="account-sidebar">
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="پروفایل کاربر">
+                            <div class="avatar-edit" id="editAvatarBtn">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <h3 class="user-name">رضا احمدی</h3>
+                        <p class="user-email">reza.ahmadi@example.com</p>
+                    </div>
+
+                    <div class="tab-header" id="mobileMenuToggle">
+                        <span>منو حساب کاربری</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+
+                    <ul class="account-menu" id="accountMenu">
+                        <li>
+                            <a href="#dashboard" class="active" data-tab="dashboard">
+                                <i class="fas fa-chart-line"></i>
+                                <span>داشبورد</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#orders" data-tab="orders">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>سفارشات من</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#cart" data-tab="cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>سبد خرید</span>
+                                <span class="cart-count"
+                                    style="margin-right: auto; position: static; width: auto; height: auto; background: var(--accent-color); padding: 2px 8px; border-radius: 10px; font-size: 12px;">۳</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#wishlist" data-tab="wishlist">
+                                <i class="fas fa-heart"></i>
+                                <span>علاقه‌مندی‌ها</span>
+                                <span
+                                    style="margin-right: auto; background: var(--accent-color); color: white; padding: 2px 8px; border-radius: 10px; font-size: 12px;">۱۲</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#addresses" data-tab="addresses">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>آدرس‌ها</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#settings" data-tab="settings">
+                                <i class="fas fa-user-cog"></i>
+                                <span>تنظیمات حساب</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#security" data-tab="security">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>امنیت</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- محتوای حساب کاربری -->
+                <div class="account-content">
+                    <!-- داشبورد -->
+                    <div class="tab-pane active" id="dashboard">
+                        <div class="tab-pane-header">
+                            <div class="tab-title">
+                                <i class="fas fa-chart-line"></i>
+                                <span>داشبورد حساب کاربری</span>
+                            </div>
+                            <div class="tab-actions">
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-redo"></i> بروزرسانی
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="card" style="border: none; box-shadow: none; padding: 30px;">
+                                <div class="dashboard-stats">
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-shopping-bag"></i>
+                                        </div>
+                                        <div class="stat-value">۸</div>
+                                        <div class="stat-label">سفارشات فعال</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="stat-value">۱۲</div>
+                                        <div class="stat-label">محصولات مورد علاقه</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-comment-dots"></i>
+                                        </div>
+                                        <div class="stat-value">۵</div>
+                                        <div class="stat-label">نظرات ثبت شده</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="stat-value">۴.۷</div>
+                                        <div class="stat-label">میانگین امتیاز</div>
+                                    </div>
+                                </div>
+
+                                <div class="recent-orders card">
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            <i class="fas fa-history"></i>
+                                            <span>سفارشات اخیر</span>
+                                        </div>
+                                        <a href="#orders" class="btn btn-primary btn-sm" data-tab="orders">
+                                            مشاهده همه
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="order-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>شماره سفارش</th>
+                                                    <th>تاریخ</th>
+                                                    <th>مبلغ</th>
+                                                    <th>وضعیت</th>
+                                                    <th>عملیات</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="order-id">ORD-7842</td>
+                                                    <td>۱۴۰۲/۰۲/۱۵</td>
+                                                    <td>۳,۴۵۰,۰۰۰ تومان</td>
+                                                    <td><span class="order-status status-completed">تکمیل شده</span>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-sm" style="padding: 8px 15px;">
+                                                            <i class="fas fa-eye"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="order-id">ORD-7819</td>
+                                                    <td>۱۴۰۲/۰۲/۱۲</td>
+                                                    <td>۱,۲۸۰,۰۰۰ تومان</td>
+                                                    <td><span class="order-status status-processing">در حال
+                                                            پردازش</span></td>
+                                                    <td>
+                                                        <button class="btn btn-sm" style="padding: 8px 15px;">
+                                                            <i class="fas fa-eye"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="order-id">ORD-7795</td>
+                                                    <td>۱۴۰۲/۰۲/۱۰</td>
+                                                    <td>۲,۵۰۰,۰۰۰ تومان</td>
+                                                    <td><span class="order-status status-pending">در انتظار
+                                                            پرداخت</span></td>
+                                                    <td>
+                                                        <button class="btn btn-sm" style="padding: 8px 15px;">
+                                                            <i class="fas fa-eye"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- سفارشات -->
+                    <div class="tab-pane" id="orders">
+                        <div class="tab-pane-header">
+                            <div class="tab-title">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>سفارشات من</span>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="card" style="border: none; box-shadow: none; padding: 30px;">
+                                <div class="orders-list">
+                                    <!-- سفارش 1 -->
+                                    <div class="order-card">
+                                        <div class="order-header">
+                                            <div class="order-info">
+                                                <h4>سفارش #ORD-7842</h4>
+                                                <div class="order-date">تاریخ سفارش: ۱۴۰۲/۰۲/۱۵ - ۱۴:۳۰</div>
+                                            </div>
+                                            <div>
+                                                <span class="order-status status-completed">تکمیل شده</span>
+                                            </div>
+                                        </div>
+                                        <div class="order-items">
+                                            <div class="order-item">
+                                                <div class="item-image">
+                                                    <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                                        alt="گوشی موبایل">
+                                                </div>
+                                                <div class="item-name">گوشی سامسونگ S23</div>
+                                                <div class="item-quantity">تعداد: ۱</div>
+                                            </div>
+                                            <div class="order-item">
+                                                <div class="item-image">
+                                                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                                        alt="ساعت هوشمند">
+                                                </div>
+                                                <div class="item-name">ساعت هوشمند</div>
+                                                <div class="item-quantity">تعداد: ۱</div>
+                                            </div>
+                                        </div>
+                                        <div class="order-footer">
+                                            <div class="order-total">۳,۴۵۰,۰۰۰ تومان</div>
+                                            <div class="order-actions">
+                                                <button class="btn btn-primary btn-sm">
+                                                    <i class="fas fa-eye"></i> مشاهده جزئیات
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- سفارش 2 -->
+                                    <div class="order-card">
+                                        <div class="order-header">
+                                            <div class="order-info">
+                                                <h4>سفارش #ORD-7819</h4>
+                                                <div class="order-date">تاریخ سفارش: ۱۴۰۲/۰۲/۱۲ - ۱۰:۱۵</div>
+                                            </div>
+                                            <div>
+                                                <span class="order-status status-processing">در حال پردازش</span>
+                                            </div>
+                                        </div>
+                                        <div class="order-items">
+                                            <div class="order-item">
+                                                <div class="item-image">
+                                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                                        alt="هدفون">
+                                                </div>
+                                                <div class="item-name">هدفون بی‌سیم</div>
+                                                <div class="item-quantity">تعداد: ۱</div>
+                                            </div>
+                                        </div>
+                                        <div class="order-footer">
+                                            <div class="order-total">۱,۲۸۰,۰۰۰ تومان</div>
+                                            <div class="order-actions">
+                                                <button class="btn btn-primary btn-sm">
+                                                    <i class="fas fa-eye"></i> مشاهده جزئیات
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- سبد خرید -->
+                    <div class="tab-pane" id="cart">
+                        <div class="tab-pane-header">
+                            <div class="tab-title">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>سبد خرید</span>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="card" style="border: none; box-shadow: none; padding: 30px;">
+                                <div class="cart-items">
+                                    <!-- محصول 1 -->
+                                    <div class="cart-item">
+                                        <div class="cart-item-image">
+                                            <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                                alt="گوشی موبایل">
+                                        </div>
+                                        <div class="cart-item-details">
+                                            <div class="cart-item-header">
+                                                <div>
+                                                    <h4 class="cart-item-title">گوشی موبایل سامسونگ گلکسی S23 اولترا
+                                                    </h4>
+                                                    <div style="color: var(--gray-color); font-size: 14px;">رنگ: مشکی |
+                                                        حافظه: ۵۱۲ گیگابایت</div>
+                                                </div>
+                                                <div class="cart-item-price">۳۲,۵۰۰,۰۰۰ تومان</div>
+                                            </div>
+                                            <div class="cart-item-actions">
+                                                <div class="cart-quantity">
+                                                    <button class="quantity-btn minus-btn">-</button>
+                                                    <span class="quantity-value">۱</span>
+                                                    <button class="quantity-btn plus-btn">+</button>
+                                                </div>
+                                                <button class="remove-item">
+                                                    <i class="fas fa-trash"></i> حذف از سبد
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- محصول 2 -->
+                                    <div class="cart-item">
+                                        <div class="cart-item-image">
+                                            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                                alt="ساعت هوشمند">
+                                        </div>
+                                        <div class="cart-item-details">
+                                            <div class="cart-item-header">
+                                                <div>
+                                                    <h4 class="cart-item-title">ساعت هوشمند اپل واچ سری ۸</h4>
+                                                    <div style="color: var(--gray-color); font-size: 14px;">سایز: ۴۴mm |
+                                                        رنگ: نقره‌ای</div>
+                                                </div>
+                                                <div class="cart-item-price">۱۸,۹۰۰,۰۰۰ تومان</div>
+                                            </div>
+                                            <div class="cart-item-actions">
+                                                <div class="cart-quantity">
+                                                    <button class="quantity-btn minus-btn">-</button>
+                                                    <span class="quantity-value">۱</span>
+                                                    <button class="quantity-btn plus-btn">+</button>
+                                                </div>
+                                                <button class="remove-item">
+                                                    <i class="fas fa-trash"></i> حذف از سبد
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cart-summary">
+                                    <div class="summary-row">
+                                        <span>مجموع قیمت کالاها</span>
+                                        <span>۵۱,۴۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span>هزینه ارسال</span>
+                                        <span>رایگان</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span>تخفیف</span>
+                                        <span style="color: var(--success-color);">۵,۰۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <div class="summary-row"
+                                        style="border-bottom: 2px solid var(--primary-color); padding-bottom: 15px;">
+                                        <span style="font-weight: 700;">مبلغ قابل پرداخت</span>
+                                        <span class="summary-total">۴۶,۴۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <div style="margin-top: 25px; display: flex; justify-content: flex-end;">
+                                        <button class="btn btn-primary" style="padding: 18px 40px;">
+                                            <i class="fas fa-credit-card"></i> ادامه فرآیند خرید
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- علاقه‌مندی‌ها -->
+                    <div class="tab-pane" id="wishlist">
+                        <div class="tab-pane-header">
+                            <div class="tab-title">
+                                <i class="fas fa-heart"></i>
+                                <span>لیست علاقه‌مندی‌ها</span>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="card" style="border: none; box-shadow: none; padding: 30px;">
+                                <div class="wishlist-grid">
+                                    <!-- محصول 1 -->
+                                    <div class="wishlist-item">
+                                        <div class="wishlist-remove">
+                                            <i class="fas fa-times"></i>
+                                        </div>
+                                        <div class="wishlist-image">
+                                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                                alt="گوشی آیفون">
+                                        </div>
+                                        <div class="wishlist-info">
+                                            <h4 class="wishlist-title">گوشی آیفون ۱۴ پرو مکس ۱ ترابایت</h4>
+                                            <div class="wishlist-price">۴۵,۹۰۰,۰۰۰ تومان</div>
+                                            <button class="btn btn-primary" style="width: 100%; padding: 12px;">
+                                                <i class="fas fa-cart-plus"></i> افزودن به سبد
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- محصول 2 -->
+                                    <div class="wishlist-item">
+                                        <div class="wishlist-remove">
+                                            <i class="fas fa-times"></i>
+                                        </div>
+                                        <div class="wishlist-image">
+                                            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                                alt="دوربین">
+                                        </div>
+                                        <div class="wishlist-info">
+                                            <h4 class="wishlist-title">دوربین DSLR کانن مدل ۲۰۲۳ + لنز ۱۸-۵۵</h4>
+                                            <div class="wishlist-price">۱۸,۷۵۰,۰۰۰ تومان</div>
+                                            <button class="btn btn-primary" style="width: 100%; padding: 12px;">
+                                                <i class="fas fa-cart-plus"></i> افزودن به سبد
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- محصول 3 -->
+                                    <div class="wishlist-item">
+                                        <div class="wishlist-remove">
+                                            <i class="fas fa-times"></i>
+                                        </div>
+                                        <div class="wishlist-image">
+                                            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                                alt="ساعت هوشمند">
+                                        </div>
+                                        <div class="wishlist-info">
+                                            <h4 class="wishlist-title">ساعت هوشمند اندروید با گارانتی ۲۴ ماهه</h4>
+                                            <div class="wishlist-price">۴,۳۲۰,۰۰۰ تومان</div>
+                                            <button class="btn btn-primary" style="width: 100%; padding: 12px;">
+                                                <i class="fas fa-cart-plus"></i> افزودن به سبد
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- آدرس‌ها -->
+                    <div class="tab-pane" id="addresses">
+                        <div class="tab-pane-header">
+                            <div class="tab-title">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>آدرس‌های من</span>
+                            </div>
+                            <button class="btn btn-outline" id="addAddressBtn">
+                                <i class="fas fa-plus"></i> افزودن آدرس جدید
+                            </button>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="card" style="border: none; box-shadow: none; padding: 30px;">
+                                <div class="addresses-grid">
+                                    <!-- آدرس 1 -->
+                                    <div class="address-card default">
+                                        <div class="default-badge">پیش‌فرض</div>
+                                        <h4 class="address-name">خانه</h4>
+                                        <div class="address-details">
+                                            تهران، خیابان آزادی، خیابان جمالزاده شمالی<br>
+                                            کوچه شهید بهنام محمدی، پلاک ۱۲، طبقه ۳، واحد ۶<br>
+                                            کد پستی: ۱۴۳۵۷-۴۵۶۷۸<br>
+                                            تلفن: ۰۹۱۲۱۲۳۴۵۶۷
+                                        </div>
+                                        <div class="address-actions">
+                                            <button class="btn btn-sm"
+                                                style="background: #f8f9fa; color: var(--dark-color);">
+                                                <i class="fas fa-edit"></i> ویرایش
+                                            </button>
+                                            <button class="btn btn-sm"
+                                                style="background: #ffebee; color: var(--accent-color);">
+                                                <i class="fas fa-trash"></i> حذف
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- آدرس 2 -->
+                                    <div class="address-card">
+                                        <h4 class="address-name">محل کار</h4>
+                                        <div class="address-details">
+                                            تهران، میدان انقلاب، خیابان کارگر شمالی<br>
+                                            کوچه شهید رحیمی، پلاک ۲۴، واحد ۲<br>
+                                            کد پستی: ۱۴۱۵۵-۳۴۵۶۷<br>
+                                            تلفن: ۰۲۱-۶۶۵۴۳۲۱
+                                        </div>
+                                        <div class="address-actions">
+                                            <button class="btn btn-sm"
+                                                style="background: #f8f9fa; color: var(--dark-color);">
+                                                <i class="fas fa-edit"></i> ویرایش
+                                            </button>
+                                            <button class="btn btn-sm"
+                                                style="background: #ffebee; color: var(--accent-color);">
+                                                <i class="fas fa-trash"></i> حذف
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- افزودن آدرس جدید -->
+                                    <div class="add-address-card" id="addNewAddressCard">
+                                        <div class="add-icon">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                        <h4 style="color: var(--primary-color); margin-bottom: 10px;">افزودن آدرس جدید
+                                        </h4>
+                                        <p style="color: var(--gray-color);">برای افزودن آدرس جدید اینجا کلیک کنید</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- تنظیمات حساب -->
+                    <div class="tab-pane" id="settings">
+                        <div class="tab-pane-header">
+                            <div class="tab-title">
+                                <i class="fas fa-user-cog"></i>
+                                <span>تنظیمات حساب کاربری</span>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="settings-form">
+                                <div class="form-section">
+                                    <h3 class="section-title">اطلاعات شخصی</h3>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label">نام</label>
+                                            <input type="text" class="form-control" value="رضا">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">نام خانوادگی</label>
+                                            <input type="text" class="form-control" value="احمدی">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">ایمیل</label>
+                                        <input type="email" class="form-control" value="reza.ahmadi@example.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">شماره تلفن</label>
+                                        <input type="tel" class="form-control" value="۰۹۱۲۱۲۳۴۵۶۷">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">تاریخ تولد</label>
+                                        <input type="text" class="form-control" value="۱۳۷۵/۰۵/۲۰">
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h3 class="section-title">تنظیمات اعلان‌ها</h3>
+                                    <div class="form-group">
+                                        <label class="checkbox-label">
+                                            <div class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </div>
+                                            <span>اعلان‌های ایمیلی برای سفارشات جدید</span>
+                                        </label>
+                                        <p class="form-text">دریافت ایمیل هنگام ثبت سفارش جدید</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="checkbox-label">
+                                            <div class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </div>
+                                            <span>اعلان‌های پیامکی برای وضعیت سفارش</span>
+                                        </label>
+                                        <p class="form-text">دریافت پیامک هنگام تغییر وضعیت سفارش</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="checkbox-label">
+                                            <div class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                            </div>
+                                            <span>خبرنامه هفتگی</span>
+                                        </label>
+                                        <p class="form-text">دریافت آخرین تخفیف‌ها و محصولات جدید</p>
+                                    </div>
+                                </div>
+
+                                <div style="text-align: left; margin-top: 30px;">
+                                    <button class="btn btn-primary" style="padding: 18px 40px;">
+                                        <i class="fas fa-save"></i> ذخیره تغییرات
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- امنیت -->
+                    <div class="tab-pane" id="security">
+                        <div class="tab-pane-header">
+                            <div class="tab-title">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>امنیت حساب کاربری</span>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="card" style="border: none; box-shadow: none; padding: 30px;">
+                                <div class="security-cards">
+                                    <!-- تغییر رمز عبور -->
+                                    <div class="security-card">
+                                        <div class="security-status">
+                                            <div>
+                                                <h4 style="margin-bottom: 5px;">تغییر رمز عبور</h4>
+                                                <p style="color: var(--gray-color); font-size: 14px;">آخرین تغییر: ۳ ماه
+                                                    پیش</p>
+                                            </div>
+                                            <div class="security-icon active">
+                                                <i class="fas fa-key"></i>
+                                            </div>
+                                        </div>
+                                        <p>برای افزایش امنیت حساب کاربری، رمز عبور خود را به‌طور مرتب تغییر دهید.</p>
+                                        <div class="security-actions">
+                                            <button class="btn btn-primary" id="changePasswordBtn">
+                                                <i class="fas fa-edit"></i> تغییر رمز عبور
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- احراز هویت دو مرحله‌ای -->
+                                    <div class="security-card">
+                                        <div class="security-status">
+                                            <div>
+                                                <h4 style="margin-bottom: 5px;">احراز هویت دو مرحله‌ای</h4>
+                                                <p style="color: var(--gray-color); font-size: 14px;">غیرفعال</p>
+                                            </div>
+                                            <div class="security-icon inactive">
+                                                <i class="fas fa-mobile-alt"></i>
+                                            </div>
+                                        </div>
+                                        <p>با فعال‌سازی این قابلیت، هنگام ورود به حساب کد تأیید به تلفن همراه شما ارسال
+                                            می‌شود.</p>
+                                        <div class="security-actions">
+                                            <button class="btn btn-primary">
+                                                <i class="fas fa-toggle-on"></i> فعال‌سازی
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- دستگاه‌های متصل -->
+                                    <div class="security-card">
+                                        <div class="security-status">
+                                            <div>
+                                                <h4 style="margin-bottom: 5px;">دستگاه‌های متصل</h4>
+                                                <p style="color: var(--gray-color); font-size: 14px;">۳ دستگاه فعال</p>
+                                            </div>
+                                            <div class="security-icon active">
+                                                <i class="fas fa-laptop"></i>
+                                            </div>
+                                        </div>
+                                        <p>نمایش و مدیریت دستگاه‌هایی که به حساب کاربری شما متصل هستند.</p>
+                                        <div class="security-actions">
+                                            <button class="btn" style="background: #f8f9fa; color: var(--dark-color);">
+                                                <i class="fas fa-list"></i> مشاهده دستگاه‌ها
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- مودال تغییر رمز عبور -->
+    <div class="modal" id="passwordModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">تغییر رمز عبور</div>
+                <button class="modal-close" id="closePasswordModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">رمز عبور فعلی</label>
+                    <input type="password" class="form-control" placeholder="رمز عبور فعلی خود را وارد کنید">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">رمز عبور جدید</label>
+                    <input type="password" class="form-control" placeholder="رمز عبور جدید خود را وارد کنید">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">تکرار رمز عبور جدید</label>
+                    <input type="password" class="form-control" placeholder="رمز عبور جدید را تکرار کنید">
+                </div>
+                <div style="margin-top: 30px; display: flex; gap: 15px;">
+                    <button class="btn btn-primary" style="flex: 1;">
+                        <i class="fas fa-save"></i> ذخیره تغییرات
+                    </button>
+                    <button class="btn" style="flex: 1; background: #f8f9fa; color: var(--dark-color);"
+                        id="cancelPasswordChange">
+                        انصراف
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال افزودن آدرس -->
+    <div class="modal" id="addressModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">افزودن آدرس جدید</div>
+                <button class="modal-close" id="closeAddressModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">عنوان آدرس</label>
+                    <input type="text" class="form-control" placeholder="مثال: خانه، محل کار">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">استان</label>
+                        <select class="form-control">
+                            <option>تهران</option>
+                            <option>البرز</option>
+                            <option>اصفهان</option>
+                            <option>فارس</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">شهر</label>
+                        <select class="form-control">
+                            <option>تهران</option>
+                            <option>کرج</option>
+                            <option>اسلامشهر</option>
+                            <option>شهریار</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">آدرس کامل</label>
+                    <textarea class="form-control" rows="3" placeholder="آدرس کامل خود را وارد کنید"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">کد پستی</label>
+                    <input type="text" class="form-control" placeholder="۱۰ رقمی">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">تلفن همراه</label>
+                    <input type="tel" class="form-control" placeholder="۰۹۱۲۱۲۳۴۵۶۷">
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" style="width: 20px; height: 20px;">
+                        <span>تعیین به عنوان آدرس پیش‌فرض</span>
+                    </label>
+                </div>
+                <div style="margin-top: 30px; display: flex; gap: 15px;">
+                    <button class="btn btn-primary" style="flex: 1;">
+                        <i class="fas fa-save"></i> ذخیره آدرس
+                    </button>
+                    <button class="btn" style="flex: 1; background: #f8f9fa; color: var(--dark-color);"
+                        id="cancelAddress">
+                        انصراف
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- فوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>درباره فروشگاه</h3>
+                    <p>فروشگاه آنلاین ما با بیش از ۱۰ سال سابقه در زمینه فروش محصولات با کیفیت، همواره سعی در ارائه
+                        بهترین خدمات به مشتریان خود داشته است.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>لینک‌های سریع</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">صفحه اصلی</a></li>
+                        <li><a href="#">محصولات پرفروش</a></li>
+                        <li><a href="#">تخفیف‌های ویژه</a></li>
+                        <li><a href="#">مقالات آموزشی</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>خدمات مشتریان</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">پیگیری سفارش</a></li>
+                        <li><a href="#">راهنمای خرید</a></li>
+                        <li><a href="#">سوالات متداول</a></li>
+                        <li><a href="#">شرایط بازگرداندن کالا</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>تماس با ما</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> تهران، خیابان آزادی، دانشگاه صنعتی شریف</li>
+                        <li><i class="fas fa-phone"></i> ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                        <li><i class="fas fa-envelope"></i> info@onlinestore.ir</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>کلیه حقوق این وبسایت متعلق به فروشگاه آنلاین می‌باشد. © ۲۰۲۳</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/accounting.js"></script>
+</body>
+
+</html>

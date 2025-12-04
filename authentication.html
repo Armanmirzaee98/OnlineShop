@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه آنلاین مدرن | ورود و ثبت نام</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="css/authentication.css">
+</head>
+
+<body>
+    <!-- هدر -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    فروشگاه آنلاین
+                </div>
+
+                <div class="search-bar">
+                    <button><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="جستجوی محصولات...">
+                </div>
+
+                <div class="user-actions">
+                    <a href="accounting.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="accounting.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <a href="accounting.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">۳</span>
+                    </a>
+                </div>
+
+                <!-- دکمه منوی موبایل -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- نوبار تو در تو -->
+            <nav>
+                <div class="navbar" id="navbar">
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> صفحه اصلی</a></li>
+
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-box"></i> محصولات <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="productviacat.html"><i class="fas fa-laptop"></i> لپ تاپ و کامپیوتر</a>
+                                </li>
+                                <li><a href="productviacat.html"><i class="fas fa-mobile-alt"></i> موبایل و تبلت</a>
+                                </li>
+                                <li><a href="productviacat.html"><i class="fas fa-tv"></i> لوازم خانگی</a></li>
+                                <li class="dropdown">
+                                    <a href="#"><i class="fas fa-tshirt"></i> پوشاک <i
+                                            class="fas fa-chevron-left"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="productviacat.html">مردانه</a></li>
+                                        <li><a href="productviacat.html">زنانه</a></li>
+                                        <li><a href="productviacat.html">بچگانه</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><i class="fas fa-book"></i> کتاب و لوازم تحریر</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="offers.html"><i class="fas fa-percent"></i> تخفیف‌ها</a></li>
+
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-list"></i> دسته‌بندی <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="productviacat.html"><i class="fas fa-laptop"></i> الکترونیک</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-home"></i> خانه و آشپزخانه</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-tshirt"></i> مد و پوشاک</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-shopping-cart"></i> کالای
+                                        سوپرمارکتی</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-running"></i> ورزش و سفر</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="contact.html"><i class="fas fa-headset"></i> پشتیبانی</a></li>
+
+                        <li>
+                            <a href="authentication.html" class="auth-simple-link">
+                                <i class="fas fa-user-circle"></i>
+                                <span>ورود / ثبت نام</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- overlay برای بستن منو -->
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <!-- بخش احراز هویت -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <!-- سمت چپ - توضیحات -->
+                <div class="auth-left">
+                    <div class="auth-left-content">
+                        <h2>به خانواده بزرگ ما بپیوندید</h2>
+                        <p>با ثبت نام در فروشگاه آنلاین ما، از مزایای ویژه‌ای بهره‌مند شوید و تجربه‌ای لذت‌بخش از خرید
+                            آنلاین داشته باشید.</p>
+
+                        <ul class="auth-features">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>تخفیف‌های ویژه برای اعضا</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>پیگیری آسان سفارشات</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>ذخیره آدرس‌های ارسال</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>تاریخچه کامل خریدها</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>پشتیبانی ویژه اعضا</span>
+                            </li>
+                        </ul>
+
+                        <div class="trust-badge">
+                            <div
+                                style="display: flex; align-items: center; gap: 15px; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 12px; backdrop-filter: blur(10px);">
+                                <i class="fas fa-shield-alt" style="font-size: 32px;"></i>
+                                <div>
+                                    <div style="font-weight: 600; font-size: 16px;">امنیت کامل اطلاعات</div>
+                                    <div style="font-size: 14px; opacity: 0.9;">اطلاعات شما نزد ما محفوظ است</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- سمت راست - فرم‌ها -->
+                <div class="auth-right">
+                    <!-- سوئیچ بین فرم‌ها -->
+                    <div class="auth-switch">
+                        <button class="auth-switch-btn active" id="loginBtn">
+                            ورود به حساب
+                        </button>
+                        <button class="auth-switch-btn" id="registerBtn">
+                            ثبت نام جدید
+                        </button>
+                    </div>
+
+                    <!-- فرم ورود -->
+                    <form class="auth-form active" id="loginForm">
+                        <h3>خوش آمدید!</h3>
+                        <p>لطفاً برای ورود به حساب کاربری خود، اطلاعات زیر را وارد کنید.</p>
+
+                        <div class="form-group">
+                            <label for="loginEmail" class="form-label">ایمیل یا شماره موبایل</label>
+                            <div class="form-input-with-icon">
+                                <input type="text" id="loginEmail" class="form-input" placeholder="example@email.com"
+                                    required>
+                                <span class="form-icon">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loginPassword" class="form-label">رمز عبور</label>
+                            <div class="form-input-with-icon">
+                                <input type="password" id="loginPassword" class="form-input"
+                                    placeholder="رمز عبور خود را وارد کنید" required>
+                                <span class="form-icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <button type="button" class="password-toggle" onclick="togglePassword('loginPassword')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-options">
+                            <div class="remember-me" onclick="toggleRemember()">
+                                <div class="remember-checkbox" id="rememberCheckbox">
+                                    <i class="fas fa-check" style="font-size: 12px;"></i>
+                                </div>
+                                <span>مرا به خاطر بسپار</span>
+                            </div>
+
+                            <a href="#" class="forgot-password" onclick="showForgotPassword()">
+                                رمز عبور را فراموش کرده‌اید؟
+                            </a>
+                        </div>
+
+                        <button type="submit" class="btn">
+                            <i class="fas fa-sign-in-alt"></i> ورود به حساب
+                        </button>
+
+                        <div class="social-auth">
+                            <p>یا با استفاده از</p>
+                            <div class="social-buttons">
+                                <button type="button" class="social-btn google" onclick="socialLogin('google')">
+                                    <i class="fab fa-google"></i>
+                                </button>
+                                <button type="button" class="social-btn facebook" onclick="socialLogin('facebook')">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                                <button type="button" class="social-btn twitter" onclick="socialLogin('twitter')">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-footer">
+                            حساب کاربری ندارید؟ <a href="#" onclick="switchToRegister()">همین حالا ثبت نام کنید</a>
+                        </div>
+                    </form>
+
+                    <!-- فرم ثبت نام -->
+                    <form class="auth-form" id="registerForm">
+                        <h3>ثبت نام جدید</h3>
+                        <p>لطفاً اطلاعات زیر را برای ایجاد حساب کاربری جدید وارد کنید.</p>
+
+                        <div class="form-group">
+                            <label for="registerName" class="form-label">نام کامل</label>
+                            <div class="form-input-with-icon">
+                                <input type="text" id="registerName" class="form-input" placeholder="نام و نام خانوادگی"
+                                    required>
+                                <span class="form-icon">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerEmail" class="form-label">ایمیل</label>
+                            <div class="form-input-with-icon">
+                                <input type="email" id="registerEmail" class="form-input"
+                                    placeholder="example@email.com" required>
+                                <span class="form-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerPhone" class="form-label">شماره موبایل</label>
+                            <div class="form-input-with-icon">
+                                <input type="tel" id="registerPhone" class="form-input" placeholder="۰۹۱۲۳۴۵۶۷۸۹"
+                                    required>
+                                <span class="form-icon">
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerPassword" class="form-label">رمز عبور</label>
+                            <div class="form-input-with-icon">
+                                <input type="password" id="registerPassword" class="form-input"
+                                    placeholder="حداقل ۸ کاراکتر" required>
+                                <span class="form-icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <button type="button" class="password-toggle"
+                                    onclick="togglePassword('registerPassword')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div style="font-size: 13px; color: var(--gray-color); margin-top: 5px;">
+                                رمز عبور باید شامل حداقل ۸ کاراکتر و ترکیبی از حروف و اعداد باشد.
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerConfirmPassword" class="form-label">تکرار رمز عبور</label>
+                            <div class="form-input-with-icon">
+                                <input type="password" id="registerConfirmPassword" class="form-input"
+                                    placeholder="تکرار رمز عبور" required>
+                                <span class="form-icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <button type="button" class="password-toggle"
+                                    onclick="togglePassword('registerConfirmPassword')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 30px;">
+                            <div style="display: flex; align-items: flex-start; gap: 10px;">
+                                <div style="margin-top: 3px;">
+                                    <input type="checkbox" id="agreeTerms" style="width: 18px; height: 18px;">
+                                </div>
+                                <label for="agreeTerms"
+                                    style="font-size: 15px; color: var(--dark-color); cursor: pointer;">
+                                    با <a href="#" style="color: var(--primary-color);">شرایط و قوانین</a> سایت موافقم و
+                                    حریم خصوصی را مطالعه کرده‌ام.
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn">
+                            <i class="fas fa-user-plus"></i> ایجاد حساب کاربری
+                        </button>
+
+                        <div class="form-footer">
+                            قبلاً حساب کاربری دارید؟ <a href="#" onclick="switchToLogin()">وارد شوید</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- مدال تبریک -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal">
+            <div class="modal-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3 id="modalTitle">ثبت نام موفق!</h3>
+            <p id="modalMessage">حساب کاربری شما با موفقیت ایجاد شد. اکنون می‌توانید وارد حساب خود شوید.</p>
+            <button class="btn" onclick="closeModal()" style="width: auto; padding: 15px 40px;">
+                <i class="fas fa-home"></i> بازگشت به صفحه اصلی
+            </button>
+        </div>
+    </div>
+
+    <!-- فوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>درباره فروشگاه</h3>
+                    <p>فروشگاه آنلاین ما با بیش از ۱۰ سال سابقه در زمینه فروش محصولات با کیفیت، همواره سعی در ارائه
+                        بهترین خدمات به مشتریان خود داشته است.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>لینک‌های سریع</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">صفحه اصلی</a></li>
+                        <li><a href="category.html">محصولات پرفروش</a></li>
+                        <li><a href="discounts.html">تخفیف‌های ویژه</a></li>
+                        <li><a href="support.html">پشتیبانی</a></li>
+                        <li><a href="auth.html">ورود / ثبت نام</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>خدمات مشتریان</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">پیگیری سفارش</a></li>
+                        <li><a href="#">راهنمای خرید</a></li>
+                        <li><a href="#">سوالات متداول</a></li>
+                        <li><a href="#">شرایط بازگرداندن کالا</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>تماس با ما</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> تهران، خیابان آزادی، دانشگاه صنعتی شریف</li>
+                        <li><i class="fas fa-phone"></i> ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                        <li><i class="fas fa-envelope"></i> info@onlinestore.ir</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>کلیه حقوق این وبسایت متعلق به فروشگاه آنلاین می‌باشد. © ۲۰۲۳</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/authentication.js"></script>
+</body>
+
+</html>

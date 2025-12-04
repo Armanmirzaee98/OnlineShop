@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه آنلاین مدرن | جستجوی محصولات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+    <!-- هدر -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    فروشگاه آنلاین
+                </div>
+
+                <div class="search-bar">
+                    <button><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="جستجوی محصولات...">
+                </div>
+
+                <div class="user-actions">
+                    <a href="accounting.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="accounting.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <a href="accounting.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">۳</span>
+                    </a>
+                </div>
+
+                <!-- دکمه منوی موبایل -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- نوبار تو در تو -->
+            <nav>
+                <div class="navbar" id="navbar">
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> صفحه اصلی</a></li>
+
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-box"></i> محصولات <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="productviacat.html"><i class="fas fa-laptop"></i> لپ تاپ و کامپیوتر</a>
+                                </li>
+                                <li><a href="productviacat.html"><i class="fas fa-mobile-alt"></i> موبایل و تبلت</a>
+                                </li>
+                                <li><a href="productviacat.html"><i class="fas fa-tv"></i> لوازم خانگی</a></li>
+                                <li class="dropdown">
+                                    <a href="#"><i class="fas fa-tshirt"></i> پوشاک <i
+                                            class="fas fa-chevron-left"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="productviacat.html">مردانه</a></li>
+                                        <li><a href="productviacat.html">زنانه</a></li>
+                                        <li><a href="productviacat.html">بچگانه</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><i class="fas fa-book"></i> کتاب و لوازم تحریر</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="offers.html"><i class="fas fa-percent"></i> تخفیف‌ها</a></li>
+
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-list"></i> دسته‌بندی <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="productviacat.html"><i class="fas fa-laptop"></i> الکترونیک</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-home"></i> خانه و آشپزخانه</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-tshirt"></i> مد و پوشاک</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-shopping-cart"></i> کالای
+                                        سوپرمارکتی</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-running"></i> ورزش و سفر</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="contact.html"><i class="fas fa-headset"></i> پشتیبانی</a></li>
+
+                        <li>
+                            <a href="authentication.html" class="auth-simple-link">
+                                <i class="fas fa-user-circle"></i>
+                                <span>ورود / ثبت نام</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- overlay برای بستن منو -->
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <!-- بخش جستجوی اصلی -->
+    <section class="search-hero">
+        <div class="container">
+            <div class="search-hero-content">
+                <h1>جستجوی <span>هوشمند</span> محصولات</h1>
+                <p>هر آنچه نیاز دارید را با قدرت جستجوی پیشرفته ما پیدا کنید. هزاران محصول با کیفیت در انتظار شما هستند.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش جستجوی پیشرفته -->
+    <div class="container">
+        <div class="advanced-search">
+            <div class="search-bar">
+                <button onclick="performSearch()"><i class="fas fa-search"></i> جستجو</button>
+                <input type="text" placeholder="محصول مورد نظر خود را جستجو کنید..." id="searchQuery"
+                    value="لپ‌تاپ گیمینگ">
+            </div>
+
+            <div class="search-filters">
+                <div class="search-actions">
+                    <button class="btn btn-primary" onclick="performSearch()">
+                        <i class="fas fa-search"></i> اعمال فیلترها
+                    </button>
+                    <button class="btn btn-outline" onclick="clearFilters()">
+                        <i class="fas fa-redo"></i> بازنشانی
+                    </button>
+                </div>
+
+                <select class="filter-select" id="categoryFilter">
+                    <option value="">همه دسته‌بندی‌ها</option>
+                    <option value="laptop" selected>لپ‌تاپ و کامپیوتر</option>
+                    <option value="mobile">موبایل و تبلت</option>
+                    <option value="home">لوازم خانگی</option>
+                    <option value="clothing">پوشاک</option>
+                    <option value="book">کتاب و لوازم تحریر</option>
+                </select>
+
+                <select class="filter-select" id="priceFilter">
+                    <option value="">همه قیمت‌ها</option>
+                    <option value="0-10">زیر ۱۰ میلیون تومان</option>
+                    <option value="10-30">۱۰ تا ۳۰ میلیون تومان</option>
+                    <option value="30-50">۳۰ تا ۵۰ میلیون تومان</option>
+                    <option value="50+" selected>بالای ۵۰ میلیون تومان</option>
+                </select>
+
+                <select class="filter-select" id="sortFilter">
+                    <option value="relevant">مرتبط‌ترین</option>
+                    <option value="newest">جدیدترین</option>
+                    <option value="bestseller">پرفروش‌ترین</option>
+                    <option value="cheapest">ارزان‌ترین</option>
+                    <option value="expensive">گران‌ترین</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- بخش نتایج جستجو -->
+    <section class="search-results-section">
+        <div class="container">
+            <div class="search-results-header">
+                <div>
+                    <h2 class="search-results-title">نتایج جستجو برای: <span>"لپ‌تاپ گیمینگ"</span></h2>
+                    <div class="search-meta">
+                        <i class="fas fa-box"></i> نمایش <strong>۱۲</strong> محصول از <strong>۴۲</strong> نتیجه یافت شده
+                    </div>
+                </div>
+
+                <div class="search-sort">
+                    <i class="fas fa-sort-amount-down"></i>
+                    <select class="sort-select" id="resultsSort">
+                        <option>مرتب‌سازی: مرتبط‌ترین</option>
+                        <option>جدیدترین</option>
+                        <option>پرفروش‌ترین</option>
+                        <option>ارزان‌ترین</option>
+                        <option>گران‌ترین</option>
+                        <option>بیشترین تخفیف</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid" id="searchResults">
+                <!-- محصولات جستجو شده -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="لپ‌تاپ گیمینگ">
+                        <span class="product-badge">تخفیف ویژه</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">لپ‌تاپ گیمینگ ایسوس ROG Strix G15</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(۴.۵)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">۶۴,۹۰۰,۰۰۰ تومان</span>
+                            <span class="old-price">۷۲,۰۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=70"
+                            alt="لپ‌تاپ اپل">
+                        <span class="product-badge">جدید</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">لپ‌تاپ اپل مک‌بوک پرو ۱۴ اینچ</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(۵.۰)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">۸۹,۹۰۰,۰۰۰ تومان</span>
+                            <span class="old-price">۹۵,۰۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+                            alt="لپ‌تاپ ایسر">
+                        <span class="product-badge">پرفروش</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">لپ‌تاپ ایسر Nitro 5 گیمینگ</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(۴.۰)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">۳۲,۵۰۰,۰۰۰ تومان</span>
+                            <span class="old-price">۳۸,۰۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=50"
+                            alt="لپ‌تاپ لنوو">
+                        <span class="product-badge">محصول منتخب</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">لپ‌تاپ لنوو Legion 5 Pro</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(۴.۷)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">۷۵,۹۰۰,۰۰۰ تومان</span>
+                            <span class="old-price">۸۴,۰۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=40"
+                            alt="کامپیوتر رومیزی">
+                        <span class="product-badge">فروش ویژه</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">کامپیوتر رومیزی گیمینگ آماده</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(۵.۰)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">۱۵۲,۰۰۰,۰۰۰ تومان</span>
+                            <span class="old-price">۱۷۰,۰۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=30"
+                            alt="لپ‌تاپ مایکروسافت">
+                        <span class="product-badge">پرطرفدار</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">لپ‌تاپ مایکروسافت سرفیس لپ‌تاپ ۴</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(۴.۰)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">۶۸,۵۰۰,۰۰۰ تومان</span>
+                            <span class="old-price">۷۵,۰۰۰,۰۰۰ تومان</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- پینیشن -->
+            <div class="pagination">
+                <button class="page-btn disabled">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <button class="page-btn active">۱</button>
+                <button class="page-btn">۲</button>
+                <button class="page-btn">۳</button>
+                <span class="page-dots">...</span>
+                <button class="page-btn">۴</button>
+                <button class="page-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش جستجوهای پرطرفدار -->
+    <section class="popular-searches">
+        <div class="container">
+            <h2 class="section-title">جستجوهای پرطرفدار</h2>
+
+            <div class="popular-tags">
+                <a href="#" class="tag">گوشی موبایل</a>
+                <a href="#" class="tag">هدفون بی‌سیم</a>
+                <a href="#" class="tag">کفش ورزشی</a>
+                <a href="#" class="tag">لپ‌تاپ دانشجویی</a>
+                <a href="#" class="tag">ساعت هوشمند</a>
+                <a href="#" class="tag">کیبورد مکانیکال</a>
+                <a href="#" class="tag">کوله پشتی</a>
+                <a href="#" class="tag">دوربین DSLR</a>
+                <a href="#" class="tag">هدست گیمینگ</a>
+                <a href="#" class="tag">تبلت اندروید</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>درباره فروشگاه</h3>
+                    <p>فروشگاه آنلاین ما با بیش از ۱۰ سال سابقه در زمینه فروش محصولات با کیفیت، همواره سعی در ارائه
+                        بهترین خدمات به مشتریان خود داشته است.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>لینک‌های سریع</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">صفحه اصلی</a></li>
+                        <li><a href="category.html">محصولات پرفروش</a></li>
+                        <li><a href="#">تخفیف‌های ویژه</a></li>
+                        <li><a href="#">مقالات آموزشی</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>خدمات مشتریان</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">پیگیری سفارش</a></li>
+                        <li><a href="#">راهنمای خرید</a></li>
+                        <li><a href="#">سوالات متداول</a></li>
+                        <li><a href="#">شرایط بازگرداندن کالا</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>تماس با ما</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> تهران، خیابان آزادی، دانشگاه صنعتی شریف</li>
+                        <li><i class="fas fa-phone"></i> ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                        <li><i class="fas fa-envelope"></i> info@onlinestore.ir</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>کلیه حقوق این وبسایت متعلق به فروشگاه آنلاین می‌باشد. © ۲۰۲۳</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/search.js"></script>
+</body>
+
+</html>

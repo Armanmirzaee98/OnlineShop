@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه آنلاین مدرن | مشخصات محصول</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/product.css">
+</head>
+
+<body>
+    <!-- هدر -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    فروشگاه آنلاین
+                </div>
+
+                <div class="search-bar">
+                    <button><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="جستجوی محصولات...">
+                </div>
+
+                <div class="user-actions">
+                    <a href="accounting.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="accounting.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <a href="accounting.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">۳</span>
+                    </a>
+                </div>
+
+                <!-- دکمه منوی موبایل -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- نوبار تو در تو -->
+            <nav>
+                <div class="navbar" id="navbar">
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> صفحه اصلی</a></li>
+
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-box"></i> محصولات <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="productviacat.html"><i class="fas fa-laptop"></i> لپ تاپ و کامپیوتر</a>
+                                </li>
+                                <li><a href="productviacat.html"><i class="fas fa-mobile-alt"></i> موبایل و تبلت</a>
+                                </li>
+                                <li><a href="productviacat.html"><i class="fas fa-tv"></i> لوازم خانگی</a></li>
+                                <li class="dropdown">
+                                    <a href="#"><i class="fas fa-tshirt"></i> پوشاک <i
+                                            class="fas fa-chevron-left"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="productviacat.html">مردانه</a></li>
+                                        <li><a href="productviacat.html">زنانه</a></li>
+                                        <li><a href="productviacat.html">بچگانه</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><i class="fas fa-book"></i> کتاب و لوازم تحریر</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="offers.html"><i class="fas fa-percent"></i> تخفیف‌ها</a></li>
+
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-list"></i> دسته‌بندی <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="productviacat.html"><i class="fas fa-laptop"></i> الکترونیک</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-home"></i> خانه و آشپزخانه</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-tshirt"></i> مد و پوشاک</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-shopping-cart"></i> کالای
+                                        سوپرمارکتی</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-running"></i> ورزش و سفر</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="contact.html"><i class="fas fa-headset"></i> پشتیبانی</a></li>
+
+                        <li>
+                            <a href="authentication.html" class="auth-simple-link">
+                                <i class="fas fa-user-circle"></i>
+                                <span>ورود / ثبت نام</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- overlay برای بستن منو -->
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <!-- بخش مشخصات محصول -->
+    <section class="product-detail-section">
+        <div class="container">
+            <!-- مسیر ناوبری -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="#">الکترونیک</a></li>
+                    <li><a href="#">موبایل و تبلت</a></li>
+                    <li>گوشی موبایل سامسونگ گلکسی S23 اولترا</li>
+                </ul>
+            </div>
+
+            <!-- محتوای اصلی محصول -->
+            <div class="product-detail-container">
+                <!-- گالری محصول -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="mainImage"
+                            src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="گوشی موبایل سامسونگ گلکسی S23 اولترا">
+                        <span class="product-badge">محصول ویژه</span>
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail active"
+                            data-image="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                            <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                alt="">
+                        </div>
+                        <div class="thumbnail"
+                            data-image="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=60&blur=10">
+                            <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=60&blur=10"
+                                alt="">
+                        </div>
+                        <div class="thumbnail"
+                            data-image="https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                            <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                alt="">
+                        </div>
+                        <div class="thumbnail"
+                            data-image="https://images.unsplash.com/photo-1598327105854-c8674faddf74?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                            <img src="https://images.unsplash.com/photo-1598327105854-c8674faddf74?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- اطلاعات محصول -->
+                <div class="product-info">
+                    <h1 class="product-title">گوشی موبایل سامسونگ گلکسی S23 اولترا ۵۱۲ گیگابایت</h1>
+
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-value">۴.۷</span>
+                            <span class="review-count">(۱۸۴ نظر)</span>
+                        </div>
+                        <div class="product-code">
+                            کد محصول: <span>SM-S918BZKGMEA</span>
+                        </div>
+                    </div>
+
+                    <p class="product-description">
+                        گوشی موبایل سامسونگ گلکسی S23 اولترا با پردازنده قدرتمند اسنپدراگون ۸ نسل ۲، صفحه نمایش داینامیک
+                        AMOLED 2X با نرخ تازه‌سازی ۱۲۰ هرتز و دوربین ۲۰۰ مگاپیکسلی، بهترین انتخاب برای کاربران حرفه‌ای
+                        است. این گوشی با باتری ۵۰۰۰ میلی‌آمپری و قابلیت شارژ سریع ۴۵ واتی، تجربه‌ای بی‌نظیر را ارائه
+                        می‌دهد.
+                    </p>
+
+                    <div class="product-features">
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> گارانتی ۲۴ ماهه سامسونگ ایران</li>
+                            <li><i class="fas fa-check-circle"></i> امکان بازگشت کالا تا ۷ روز</li>
+                            <li><i class="fas fa-check-circle"></i> ارسال رایگان در تهران</li>
+                            <li><i class="fas fa-check-circle"></i> موجود در انبار (تحویل ۲۴ ساعته)</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-price-section">
+                        <div class="price-row">
+                            <div>
+                                <span class="current-price">۳۲,۵۰۰,۰۰۰ تومان</span>
+                                <span class="old-price">۳۸,۰۰۰,۰۰۰ تومان</span>
+                            </div>
+                            <span class="discount-percent">۱۵٪ تخفیف</span>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <input type="text" class="quantity-input" value="1" readonly>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
+
+                        <button class="btn btn-primary d-block" id="addToCartBtn">
+                            <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                        </button>
+                    </div>
+                    <button class="btn btn-outline">
+                        <i class="fas fa-heart"></i> افزودن به علاقه‌مندی‌ها
+                    </button>
+                </div>
+            </div>
+
+            <!-- تب‌های اطلاعات محصول -->
+            <div class="product-tabs">
+                <div class="tab-headers">
+                    <div class="tab-header active" data-tab="specs">مشخصات فنی</div>
+                    <div class="tab-header" data-tab="reviews">نظرات کاربران</div>
+                    <div class="tab-header" data-tab="faq">سوالات متداول</div>
+                    <div class="tab-header" data-tab="add-review">ثبت نظر</div>
+                </div>
+
+                <div class="tab-content">
+                    <!-- مشخصات فنی -->
+                    <div class="tab-pane active" id="specs">
+                        <h3>مشخصات کامل گوشی موبایل سامسونگ گلکسی S23 اولترا</h3>
+                        <table class="specs-table">
+                            <tr>
+                                <td>مدل</td>
+                                <td>Galaxy S23 Ultra 5G</td>
+                            </tr>
+                            <tr>
+                                <td>حافظه داخلی</td>
+                                <td>۵۱۲ گیگابایت</td>
+                            </tr>
+                            <tr>
+                                <td>حافظه RAM</td>
+                                <td>۱۲ گیگابایت</td>
+                            </tr>
+                            <tr>
+                                <td>پردازنده</td>
+                                <td>Qualcomm Snapdragon 8 Gen 2</td>
+                            </tr>
+                            <tr>
+                                <td>صفحه نمایش</td>
+                                <td>Dynamic AMOLED 2X - 6.8 اینچ - رزولوشن 3088x1440</td>
+                            </tr>
+                            <tr>
+                                <td>دوربین اصلی</td>
+                                <td>۲۰۰ مگاپیکسل + ۱۰ مگاپیکسل + ۱۰ مگاپیکسل + ۱۲ مگاپیکسل</td>
+                            </tr>
+                            <tr>
+                                <td>دوربین سلفی</td>
+                                <td>۱۲ مگاپیکسل</td>
+                            </tr>
+                            <tr>
+                                <td>سیستم عامل</td>
+                                <td>Android 13 با One UI 5.1</td>
+                            </tr>
+                            <tr>
+                                <td>باتری</td>
+                                <td>۵۰۰۰ میلی‌آمپر ساعت با شارژ سریع ۴۵ وات</td>
+                            </tr>
+                            <tr>
+                                <td>سایر ویژگی‌ها</td>
+                                <td>ضد آب IP68، قلم S-Pen، اسکنر اثر انگشت زیر نمایشگر، ۵G</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- نظرات کاربران -->
+                    <div class="tab-pane" id="reviews">
+                        <h3>نظرات کاربران درباره این محصول</h3>
+
+                        <div class="review-item">
+                            <div class="reviewer-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                    alt="رضا حسینی">
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <div class="reviewer-name">رضا حسینی</div>
+                                    <div class="review-date">۱۵ فروردین ۱۴۰۲</div>
+                                </div>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">
+                                    واقعاً عالی است! کیفیت دوربین فوق‌العاده‌ست. باتری هم تمام روز با من همراه بود.
+                                    طراحی زیبا و عملکرد روان. بهترین گوشی‌ای است که تا به حال داشته‌ام.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="reviewer-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b786d4d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                    alt="فاطمه کریمی">
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <div class="reviewer-name">فاطمه کریمی</div>
+                                    <div class="review-date">۱۲ فروردین ۱۴۰۲</div>
+                                </div>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="review-text">
+                                    گوشی خیلی خوبیه ولی کمی سنگینه. دوربین عالی داره و نمایشگر خیلی با کیفیتی داره.
+                                    قیمتش نسبتا بالاست اما ارزشش رو داره.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="reviewer-avatar">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                    alt="علیرضا محمدی">
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <div class="reviewer-name">علیرضا محمدی</div>
+                                    <div class="review-date">۵ فروردین ۱۴۰۲</div>
+                                </div>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="review-text">
+                                    عملکرد عالی و دوربین فوق‌العاده. اما شارژ خیلی سریع نیست. نمایشگر بزرگ و باکیفیت.
+                                    قلم S-Pen واقعا کاربردی‌ست.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- سوالات متداول -->
+                    <div class="tab-pane" id="faq">
+                        <h3>سوالات متداول درباره این محصول</h3>
+
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    آیا این گوشی قابلیت 5G دارد؟
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    بله، گوشی گلکسی S23 اولترا از فناوری 5G پشتیبانی می‌کند و می‌تواند در شبکه‌های نسل
+                                    پنجم با سرعت بالا اتصال برقرار کند.
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    گارانتی این محصول چگونه است؟
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    این محصول دارای ۲۴ ماه گارانتی رسمی سامسونگ ایران می‌باشد که شامل تعمیر و تعویض
+                                    قطعات معیوب می‌شود.
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    آیا قلم S-Pen همراه گوشی ارائه می‌شود؟
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    بله، قلم S-Pen در جعبه گوشی قرار دارد و می‌توانید از آن برای نوشتن، طراحی و کنترل
+                                    گوشی استفاده کنید.
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    باتری این گوشی چقدر عمر می‌کند؟
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    باتری ۵۰۰۰ میلی‌آمپری این گوشی با استفاده معمولی (تماس، وب‌گردی، شبکه‌های اجتماعی)
+                                    تا یک روز و نیم دوام می‌آورد.
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    آیا گوشی ضد آب است؟
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    بله، این گوشی دارای استاندارد IP68 است که به معنای مقاومت در برابر غوطه‌وری در آب تا
+                                    عمق ۱.۵ متر به مدت ۳۰ دقیقه می‌باشد.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ثبت نظر -->
+                    <div class="tab-pane" id="add-review">
+                        <div class="review-form">
+                            <h3 class="form-title">ثبت نظر جدید</h3>
+
+                            <div class="rating-input">
+                                <i class="fas fa-star" data-rating="1"></i>
+                                <i class="fas fa-star" data-rating="2"></i>
+                                <i class="fas fa-star" data-rating="3"></i>
+                                <i class="fas fa-star" data-rating="4"></i>
+                                <i class="fas fa-star" data-rating="5"></i>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reviewName">نام و نام خانوادگی</label>
+                                <input type="text" id="reviewName" class="form-control"
+                                    placeholder="نام خود را وارد کنید">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reviewEmail">ایمیل</label>
+                                <input type="email" id="reviewEmail" class="form-control"
+                                    placeholder="ایمیل خود را وارد کنید">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reviewTitle">عنوان نظر</label>
+                                <input type="text" id="reviewTitle" class="form-control"
+                                    placeholder="عنوانی برای نظر خود انتخاب کنید">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reviewText">متن نظر</label>
+                                <textarea id="reviewText" class="form-control"
+                                    placeholder="تجربه خود از استفاده از این محصول را بنویسید"></textarea>
+                            </div>
+
+                            <button class="btn btn-primary btn-submit" id="submitReviewBtn">
+                                <i class="fas fa-paper-plane"></i> ارسال نظر
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- محصولات مرتبط -->
+            <section class="related-products">
+                <h2 class="section-title">محصولات مرتبط</h2>
+
+                <div class="swiper relatedProductsSwiper">
+                    <div class="swiper-wrapper">
+                        <!-- محصول مرتبط 1 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        alt="گوشی آیفون">
+                                    <span class="product-badge">محصول ویژه</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">گوشی آیفون ۱۴ پرو مکس ۱ ترابایت</h3>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>(۴.۷)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">۴۵,۹۰۰,۰۰۰ تومان</span>
+                                        <span class="old-price">۵۲,۰۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <button class="add-to-cart">
+                                        <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- محصول مرتبط 2 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        alt="گوشی شیائومی">
+                                    <span class="product-badge">تخفیف ویژه</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">گوشی شیائومی ۱۳ پرو ۵۱۲ گیگابایت</h3>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>(۴.۰)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">۱۸,۵۰۰,۰۰۰ تومان</span>
+                                        <span class="old-price">۲۲,۰۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <button class="add-to-cart">
+                                        <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- محصول مرتبط 3 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1558888401-f5c0c8eefd5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        alt="تبلت سامسونگ">
+                                    <span class="product-badge">جدید</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">تبلت سامسونگ گلکسی تب S8 اولترا</h3>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>(۴.۰)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">۲۲,۵۰۰,۰۰۰ تومان</span>
+                                        <span class="old-price">۲۸,۰۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <button class="add-to-cart">
+                                        <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- محصول مرتبط 4 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        alt="ساعت هوشمند">
+                                    <span class="product-badge">پرفروش</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">ساعت هوشمند سامسونگ گلکسی واچ ۵</h3>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(۵.۰)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">۱۱,۹۰۰,۰۰۰ تومان</span>
+                                        <span class="old-price">۱۵,۰۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <button class="add-to-cart">
+                                        <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- محصول مرتبط 1 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        alt="گوشی آیفون">
+                                    <span class="product-badge">محصول ویژه</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">گوشی آیفون ۱۴ پرو مکس ۱ ترابایت</h3>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>(۴.۷)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">۴۵,۹۰۰,۰۰۰ تومان</span>
+                                        <span class="old-price">۵۲,۰۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <button class="add-to-cart">
+                                        <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- محصول مرتبط 2 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        alt="گوشی شیائومی">
+                                    <span class="product-badge">تخفیف ویژه</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">گوشی شیائومی ۱۳ پرو ۵۱۲ گیگابایت</h3>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>(۴.۰)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">۱۸,۵۰۰,۰۰۰ تومان</span>
+                                        <span class="old-price">۲۲,۰۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <button class="add-to-cart">
+                                        <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- محصول مرتبط 3 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1558888401-f5c0c8eefd5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        alt="تبلت سامسونگ">
+                                    <span class="product-badge">جدید</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">تبلت سامسونگ گلکسی تب S8 اولترا</h3>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>(۴.۰)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">۲۲,۵۰۰,۰۰۰ تومان</span>
+                                        <span class="old-price">۲۸,۰۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <button class="add-to-cart">
+                                        <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- محصول مرتبط 4 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        alt="ساعت هوشمند">
+                                    <span class="product-badge">پرفروش</span>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">ساعت هوشمند سامسونگ گلکسی واچ ۵</h3>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(۵.۰)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="current-price">۱۱,۹۰۰,۰۰۰ تومان</span>
+                                        <span class="old-price">۱۵,۰۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <button class="add-to-cart">
+                                        <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>درباره فروشگاه</h3>
+                    <p>فروشگاه آنلاین ما با بیش از ۱۰ سال سابقه در زمینه فروش محصولات با کیفیت، همواره سعی در ارائه
+                        بهترین خدمات به مشتریان خود داشته است.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>لینک‌های سریع</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">صفحه اصلی</a></li>
+                        <li><a href="#">محصولات پرفروش</a></li>
+                        <li><a href="#">تخفیف‌های ویژه</a></li>
+                        <li><a href="#">مقالات آموزشی</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>خدمات مشتریان</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">پیگیری سفارش</a></li>
+                        <li><a href="#">راهنمای خرید</a></li>
+                        <li><a href="#">سوالات متداول</a></li>
+                        <li><a href="#">شرایط بازگرداندن کالا</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>تماس با ما</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> تهران، خیابان آزادی، دانشگاه صنعتی شریف</li>
+                        <li><i class="fas fa-phone"></i> ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                        <li><i class="fas fa-envelope"></i> info@onlinestore.ir</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>کلیه حقوق این وبسایت متعلق به فروشگاه آنلاین می‌باشد. © ۲۰۲۳</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script src="js/product.js"></script>
+</body>
+
+</html>

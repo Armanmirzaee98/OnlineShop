@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه آنلاین مدرن | پشتیبانی و تماس</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+    <!-- هدر -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    فروشگاه آنلاین
+                </div>
+
+                <div class="search-bar">
+                    <button><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="جستجوی محصولات...">
+                </div>
+
+                <div class="user-actions">
+                    <a href="accounting.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="accounting.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <a href="accounting.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">۳</span>
+                    </a>
+                </div>
+
+                <!-- دکمه منوی موبایل -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- نوبار تو در تو -->
+            <nav>
+                <div class="navbar" id="navbar">
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> صفحه اصلی</a></li>
+
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-box"></i> محصولات <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="productviacat.html"><i class="fas fa-laptop"></i> لپ تاپ و کامپیوتر</a>
+                                </li>
+                                <li><a href="productviacat.html"><i class="fas fa-mobile-alt"></i> موبایل و تبلت</a>
+                                </li>
+                                <li><a href="productviacat.html"><i class="fas fa-tv"></i> لوازم خانگی</a></li>
+                                <li class="dropdown">
+                                    <a href="#"><i class="fas fa-tshirt"></i> پوشاک <i
+                                            class="fas fa-chevron-left"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="productviacat.html">مردانه</a></li>
+                                        <li><a href="productviacat.html">زنانه</a></li>
+                                        <li><a href="productviacat.html">بچگانه</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><i class="fas fa-book"></i> کتاب و لوازم تحریر</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="offers.html"><i class="fas fa-percent"></i> تخفیف‌ها</a></li>
+
+                        <li class="dropdown">
+                            <a href="#"><i class="fas fa-list"></i> دسته‌بندی <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="productviacat.html"><i class="fas fa-laptop"></i> الکترونیک</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-home"></i> خانه و آشپزخانه</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-tshirt"></i> مد و پوشاک</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-shopping-cart"></i> کالای
+                                        سوپرمارکتی</a></li>
+                                <li><a href="productviacat.html"><i class="fas fa-running"></i> ورزش و سفر</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="contact.html"><i class="fas fa-headset"></i> پشتیبانی</a></li>
+
+                        <li>
+                            <a href="authentication.html" class="auth-simple-link">
+                                <i class="fas fa-user-circle"></i>
+                                <span>ورود / ثبت نام</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- overlay برای بستن منو -->
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <!-- هیرو بخش پشتیبانی -->
+    <section class="support-hero">
+        <div class="container">
+            <div class="support-hero-content">
+                <h1>مرکز <span>پشتیبانی</span> مشتریان</h1>
+                <p>ما اینجا هستیم تا به تمام سوالات شما پاسخ دهیم. تیم پشتیبانی ۲۴/۷ آماده کمک به شماست.</p>
+
+                <div class="support-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">۹۸.۵٪</div>
+                        <div class="stat-label">رضایت مشتریان</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">۵ دقیقه</div>
+                        <div class="stat-label">میانگین زمان پاسخ</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">۲۴/۷</div>
+                        <div class="stat-label">پشتیبانی آنلاین</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش راه‌های ارتباطی -->
+    <section class="contact-methods">
+        <div class="container">
+            <h2 class="section-title">راه‌های ارتباط با ما</h2>
+
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>تلفن پشتیبانی</h3>
+                    <p>برای مشاوره و پشتیبانی تلفنی با ما تماس بگیرید.</p>
+                    <div class="contact-info">۰۲۱-۱۲۳۴۵۶۷۸</div>
+                    <div class="contact-time">پاسخگویی ۲۴ ساعته</div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>ایمیل</h3>
+                    <p>برای پیگیری سفارشات و ارسال درخواست از طریق ایمیل اقدام کنید.</p>
+                    <div class="contact-info">support@onlinestore.ir</div>
+                    <div class="contact-time">پاسخ در کمتر از ۲ ساعت</div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>چت آنلاین</h3>
+                    <p>برای دریافت سریع پاسخ با کارشناسان ما به صورت آنلاین گفتگو کنید.</p>
+                    <div class="contact-info">شروع گفتگو</div>
+                    <div class="contact-time">همین حالا آنلاین هستیم</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش فرم تماس -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="form-title">فرم تماس با پشتیبانی</h2>
+
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="form-label">نام کامل</label>
+                            <input type="text" id="name" class="form-input"
+                                placeholder="نام و نام خانوادگی خود را وارد کنید" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">ایمیل</label>
+                            <input type="email" id="email" class="form-input" placeholder="example@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">شماره تماس</label>
+                            <input type="tel" id="phone" class="form-input" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">موضوع</label>
+                            <select id="subject" class="form-select" required>
+                                <option value="">انتخاب موضوع</option>
+                                <option value="order">پیگیری سفارش</option>
+                                <option value="return">مرجوعی کالا</option>
+                                <option value="technical">مشکل فنی</option>
+                                <option value="suggestion">پیشنهاد و انتقاد</option>
+                                <option value="other">سایر</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">پیام شما</label>
+                        <textarea id="message" class="form-textarea" placeholder="پیام خود را با جزئیات کامل بنویسید..."
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group" style="text-align: center;">
+                        <button type="submit" class="btn">
+                            <i class="fas fa-paper-plane"></i> ارسال پیام
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش سوالات متداول -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">سوالات متداول</h2>
+
+            <div class="faq-container">
+                <!-- سوال ۱ -->
+                <div class="faq-item" id="faq1">
+                    <div class="faq-question" onclick="toggleFAQ('faq1')">
+                        <h3>چگونه می‌توانم سفارشم را پیگیری کنم؟</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>برای پیگیری سفارش خود می‌توانید وارد حساب کاربری خود شده و از بخش "سفارشات من" وضعیت سفارش
+                            خود را مشاهده کنید. همچنین کد پیگیری که از طریق پیامک دریافت کرده‌اید را در بخش "پیگیری
+                            سفارش" در صفحه اصلی وارد نمایید.</p>
+                    </div>
+                </div>
+
+                <!-- سوال ۲ -->
+                <div class="faq-item" id="faq2">
+                    <div class="faq-question" onclick="toggleFAQ('faq2')">
+                        <h3>شرایط بازگرداندن کالا چگونه است؟</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>شما تا ۷ روز پس از دریافت کالا می‌توانید درخواست بازگرداندن کالا دهید. کالا باید بدون
+                            کوچکترین آسیبی و در بسته‌بندی اصلی خود بازگردانده شود. هزینه ارسال مرجوعی بر عهده مشتری است.
+                            پس از بررسی کالا در انبار، مبلغ به حساب شما بازگردانده می‌شود.</p>
+                    </div>
+                </div>
+
+                <!-- سوال ۳ -->
+                <div class="faq-item" id="faq3">
+                    <div class="faq-question" onclick="toggleFAQ('faq3')">
+                        <h3>آیا امکان خرید به صورت اقساطی وجود دارد؟</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>بله، برای خریدهای بالای ۵ میلیون تومان امکان پرداخت اقساطی تا ۱۲ ماه با کارت‌های عضو شتاب
+                            فراهم است. برای اطلاعات بیشتر می‌توانید با واحد فروش تماس بگیرید.</p>
+                    </div>
+                </div>
+
+                <!-- سوال ۴ -->
+                <div class="faq-item" id="faq4">
+                    <div class="faq-question" onclick="toggleFAQ('faq4')">
+                        <h3>زمان ارسال سفارشات چقدر است؟</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>سفارشات داخل تهران حداکثر تا ۲۴ ساعت و سفارشات شهرستان حداکثر تا ۷۲ ساعت پس از ثبت سفارش
+                            ارسال می‌شوند. در ایام تعطیل و روزهای خاص ممکن است این زمان کمی بیشتر باشد.</p>
+                    </div>
+                </div>
+
+                <!-- سوال ۵ -->
+                <div class="faq-item" id="faq5">
+                    <div class="faq-question" onclick="toggleFAQ('faq5')">
+                        <h3>آیا گارانتی محصولات را ارائه می‌دهید؟</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>بله، تمام محصولات الکترونیکی با گارانتی ۱۸ ماهه و محصولات دیگر با گارانتی ۱۲ ماهه ارائه
+                            می‌شوند. گارانتی معتبر همراه با فاکتور رسمی برای شما ارسال می‌شود.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش سیستم پشتیبانی آنلاین -->
+    <section class="live-support">
+        <div class="container">
+            <div class="live-support-content">
+                <div class="support-status">
+                    <div class="status-indicator"></div>
+                    <span>هم‌اکنون آنلاین هستیم</span>
+                </div>
+
+                <h2>پشتیبانی آنلاین</h2>
+                <p>کارشناسان ما هم‌اکنون آماده پاسخگویی به سوالات شما هستند. برای شروع گفتگو، دکمه زیر را بفشارید.</p>
+
+                <button class="btn" onclick="startLiveChat()" style="background: white; color: var(--info-color);">
+                    <i class="fas fa-comment-dots"></i> شروع گفتگوی آنلاین
+                </button>
+
+                <div class="support-agents">
+                    <div class="agent-card">
+                        <div class="agent-avatar">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                alt="کارشناس پشتیبانی">
+                        </div>
+                        <div class="agent-name">سارا محمدی</div>
+                        <div class="agent-role">کارشناس فروش</div>
+                    </div>
+
+                    <div class="agent-card">
+                        <div class="agent-avatar">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                alt="کارشناس پشتیبانی">
+                        </div>
+                        <div class="agent-name">علی رضایی</div>
+                        <div class="agent-role">کارشناس فنی</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش نقشه -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">دفتر مرکزی ما</h2>
+
+            <div class="map-container">
+                <!-- در حالت واقعی اینجا نقشه گوگل قرار می‌گیرد -->
+                <div
+                    style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(23, 162, 184, 0.1), rgba(37, 117, 252, 0.1)); display: flex; align-items: center; justify-content: center; color: var(--gray-color); font-size: 18px;">
+                    <div style="text-align: center; padding: 20px;">
+                        <i class="fas fa-map-marker-alt"
+                            style="font-size: 50px; color: var(--info-color); margin-bottom: 20px;"></i>
+                        <p>تهران، خیابان آزادی، دانشگاه صنعتی شریف، ساختمان مرکزی، طبقه سوم</p>
+                        <p style="margin-top: 10px;">📍 نقشه گوگل در اینجا نمایش داده می‌شود</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>درباره فروشگاه</h3>
+                    <p>فروشگاه آنلاین ما با بیش از ۱۰ سال سابقه در زمینه فروش محصولات با کیفیت، همواره سعی در ارائه
+                        بهترین خدمات به مشتریان خود داشته است.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>لینک‌های سریع</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">صفحه اصلی</a></li>
+                        <li><a href="category.html">محصولات پرفروش</a></li>
+                        <li><a href="discounts.html">تخفیف‌های ویژه</a></li>
+                        <li><a href="support.html">پشتیبانی</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>خدمات مشتریان</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">پیگیری سفارش</a></li>
+                        <li><a href="#">راهنمای خرید</a></li>
+                        <li><a href="#">سوالات متداول</a></li>
+                        <li><a href="#">شرایط بازگرداندن کالا</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>تماس با ما</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> تهران، خیابان آزادی، دانشگاه صنعتی شریف</li>
+                        <li><i class="fas fa-phone"></i> ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                        <li><i class="fas fa-envelope"></i> info@onlinestore.ir</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>کلیه حقوق این وبسایت متعلق به فروشگاه آنلاین می‌باشد. © ۲۰۲۳</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
